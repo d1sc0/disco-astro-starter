@@ -121,7 +121,16 @@ See [agent.md](agent.md) for co-pilot/agent onboarding, automation gotchas, and 
 
 ---
 
-## To-do
+## Site Features
 
-- [ ] Set up Firebase redirect for /podcast.xml
-- [ ] Update HeadSEO and pageMeta descriptions
+- **Responsive hamburger navigation** for mobile and desktop
+- **Multi-page blog post lists** with image previews
+- **Individual post pages** with next and previous navigation buttons
+- **Latest post component** highlights the newest content
+- **Accessible, semantic HTML** and ARIA attributes for navigation
+- **Modern, modular CSS** with theme variables
+- **Image preview and Open Graph generation** for social sharing
+- **Admin UI** for content management (Sveltia CMS)
+- **Automatic image and Markdown path correction**
+- **Pagination** for posts and episode lists
+- **Customizable site title and palette**
