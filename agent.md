@@ -1,27 +1,31 @@
-# Agent Notes for updownpod.com
+# Agent Notes for disco-astro-starter
 
 ## Project Overview
 
-- Modern Astro v6 podcast site with Sveltia CMS integration
+- Modern Astro v6 starter for quickly creating new static sites
+- Sveltia CMS integration for content management (config and schemas updated for general use)
 - Automated OG and preview image generation (Puppeteer)
 - Modular CSS with PostCSS (postcss-preset-env, autoprefixer)
 - Static asset and Markdown content workflow
 - Deploys to Firebase Hosting via GitHub Actions
 
+## Sveltia CMS Integration
+
+- Sveltia CMS is pre-configured for managing content collections and pages.
+- The CMS config and content schemas are updated for flexible, non-podcast use.
+- Markdown and asset workflows are compatible with Sveltia CMS output.
+- If you update content schemas, ensure the CMS config and prebuild scripts are kept in sync.
+
 ## Key Automation/Workflow
 
 - `prebuild` script runs before dev/build: fixes image paths, renames Markdown files to match slug, generates OG/preview images
-- All image templates include Google Fonts for Jersey 15 for consistent font rendering
-- No manual Markdown or asset path edits needed after CMS use
 - Astro build copies all public/ assets to dist/ for deployment
 
-## Gotchas & Best Practices
+## Best Practices
 
 - Always run `npm run prebuild` before committing new/edited Markdown or images to ensure filenames and paths are correct
-- If you add new fonts to image templates, update the Puppeteer scripts to wait for them
-- If you change the CMS media folder, update the prebuild script accordingly
-- For local preview of image templates, open in browser (background and fonts will load)
-- For troubleshooting image generation, check Puppeteer logs and ensure Google Fonts links are present in templates
+- If you change the folder structure for media or content, update the prebuild script accordingly
+- For troubleshooting image generation, check Puppeteer logs and template files
 
 ## Deployment
 
@@ -38,6 +42,6 @@
 
 ## Troubleshooting
 
-- If images/fonts are missing in generated images, check Google Fonts link and font wait logic in scripts
+- If images are missing in generated images, check template and script logic
 - If Markdown files are not renamed, check slug frontmatter and prebuild script
 - If images are missing on deployed site, ensure they exist in public/ before build
