@@ -7,9 +7,9 @@ media_folder: 'src/assets/uploaded_images'
 publish_mode: editorial_workflow
 
 collections:
-  - name: 'episodes'
-    label: 'Episodes'
-    folder: 'src/content/episodes'
+  - name: 'posts'
+    label: 'Posts'
+    folder: 'src/content/posts'
     create: true
     slug: '{{slug}}'
     extension: 'md'
@@ -66,17 +66,3 @@ collections:
               - { label: 'URL', name: 'url', widget: 'string' }
               - { label: 'Icon', name: 'icon', widget: 'string' }
               - { label: 'Aria Label', name: 'aria', widget: 'string' }
-  - name: 'subscribe_links'
-    label: 'Podcast Subscribe Links'
-    files:
-      - file: 'src/content/subscribe-links.json'
-        label: 'Podcast Subscribe Links'
-        name: 'subscribe_links_file'
-        fields:
-          - label: 'Links'
-            name: 'links'
-            widget: 'list'
-            fields:
-              - { label: 'Label', name: 'label', widget: 'string' }
-              - { label: 'URL', name: 'url', widget: 'string' }
-              - { label: 'Icon', name: 'icon', widget: 'string' }
