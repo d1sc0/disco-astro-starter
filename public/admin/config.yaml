@@ -1,0 +1,82 @@
+backend:
+  name: github
+  branch: main
+  repo: d1sc0/updownpod
+
+media_folder: 'src/assets/uploaded_images'
+publish_mode: editorial_workflow
+
+collections:
+  - name: 'episodes'
+    label: 'Episodes'
+    folder: 'src/content/episodes'
+    create: true
+    slug: '{{slug}}'
+    extension: 'md'
+    format: 'yaml-frontmatter'
+    media_folder_relative: true
+    sortable_fields: ['title', 'pubDate']
+    default_sort:
+      - { field: pubDate, direction: descending }
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'slug', name: 'slug', widget: 'string' }
+      - { label: 'Draft', name: 'draft', widget: 'boolean' }
+      - { label: 'Date', name: 'pubDate', widget: 'datetime' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'pages'
+    label: 'Pages'
+    folder: 'src/content/pages'
+    create: false
+    slug: '{{slug}}'
+    extension: 'md'
+    format: 'yaml-frontmatter'
+    media_folder_relative: true
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'text' }
+      - { label: 'Slug', name: 'slug', widget: 'string' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+  - name: 'navigation'
+    label: 'Main Site Menu'
+    files:
+      - file: 'src/content/navigation.json'
+        label: 'Main Site Menu'
+        name: 'main_menu'
+        fields:
+          - label: 'Links'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - { label: 'Label', name: 'label', widget: 'string' }
+              - { label: 'URL', name: 'url', widget: 'string' }
+  - name: 'footer_socials'
+    label: 'Footer Socials'
+    files:
+      - file: 'src/content/footer-links.json'
+        label: 'Footer Social Links'
+        name: 'footer_links'
+        fields:
+          - label: 'Links'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - { label: 'Label', name: 'label', widget: 'string' }
+              - { label: 'URL', name: 'url', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'string' }
+              - { label: 'Aria Label', name: 'aria', widget: 'string' }
+  - name: 'subscribe_links'
+    label: 'Podcast Subscribe Links'
+    files:
+      - file: 'src/content/subscribe-links.json'
+        label: 'Podcast Subscribe Links'
+        name: 'subscribe_links_file'
+        fields:
+          - label: 'Links'
+            name: 'links'
+            widget: 'list'
+            fields:
+              - { label: 'Label', name: 'label', widget: 'string' }
+              - { label: 'URL', name: 'url', widget: 'string' }
+              - { label: 'Icon', name: 'icon', widget: 'string' }

@@ -1,0 +1,24 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import '../styles/md-post-layout.css';
+const { frontmatter, prevpost, nextpost, slug } = Astro.props;
+const dateOptions = {
+  year: 'numeric' as const,
+  month: 'long' as const,
+  day: 'numeric' as const,
+};
+const formattedPublishDate = new Date(frontmatter.pubDate).toLocaleDateString(
+  'en-UK',
+  dateOptions,
+);
+---
+
+<BaseLayout frontmatter={frontmatter} prevpost={prevpost} nextpost={nextpost}>
+  <section class="post-layout content-padding">
+    <h2 class="post-layout__title">{frontmatter.title}</h2>
+    <p class="post-layout__date">Published: {formattedPublishDate}</p>
+    <div class="post-layout__content">
+      <slot />
+    </div>
+  </section>
+</BaseLayout>
