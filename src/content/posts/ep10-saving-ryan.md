@@ -4,6 +4,7 @@ slug: ep10-saving-ryan
 draft: false
 pubDate: 2026-04-12T02:31:00
 description: 'Boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola.'
+tags: ['story', 'saving', 'challenge', 'teamwork']
 ---
 
 ![Camera](../../assets/uploaded_images/camera_girl_FULL.jpg)

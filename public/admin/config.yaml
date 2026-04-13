@@ -24,6 +24,12 @@ collections:
       - { label: 'Draft', name: 'draft', widget: 'boolean' }
       - { label: 'Date', name: 'pubDate', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'text' }
+      - label: 'Tags'
+        name: 'tags'
+        widget: 'list'
+        allow_add: true
+        summary: '{{fields.tags}}'
+        field: { label: 'Tag', name: 'tag', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'pages'
     label: 'Pages'

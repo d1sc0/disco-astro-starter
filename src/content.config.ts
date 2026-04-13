@@ -10,6 +10,7 @@ const posts = defineCollection({
     pubDate: z.date(),
     description: z.string(),
     draft: z.boolean().optional(),
+    tags: z.array(z.string()).optional(),
   }),
 });
 

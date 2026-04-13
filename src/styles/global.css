@@ -90,7 +90,8 @@ p.toplink {
   text-align: center;
 }
 
-img[src*='FULL'] {
+img[src*='FULL'],
+.imageFull {
   width: 100%;
   height: auto;
   margin-bottom: 0rem;
