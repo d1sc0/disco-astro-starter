@@ -23,6 +23,6 @@ Pancetta brisket bresaola, frankfurter pork belly doner. Shankle brisket turduck
 
 ![](/src/assets/uploaded_images/horse-RIGHT.jpg)
 
-![](/src/assets/uploaded_images/baby-FULL.jpg)
+![](/src/assets/uploaded_images/toys-FULL.jpg)
 
 ![](/src/assets/uploaded_images/toys-FULL.jpg)
