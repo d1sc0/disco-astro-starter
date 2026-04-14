@@ -150,3 +150,20 @@ See [agent.md](agent.md) for co-pilot/agent onboarding, automation gotchas, and 
 - **Automatic image and Markdown path correction**
 - **Pagination** for posts and episode lists
 - **Customizable site title and palette**
+
+---
+
+## Cleaning Generated Images
+
+By default, the deployment workflow runs the prebuild script with the `--clean` flag, which deletes all images in `/public/generated_preview_images` and `/public/generated_social_images` before generating new ones. This ensures that only up-to-date images are present after each build.
+
+- To manually trigger this cleanup, use:
+  ```
+  npm run prebuild:clean
+  ```
+- The regular prebuild (without `--clean`) does not delete any images:
+  ```
+  npm run prebuild
+  ```
+
+**Note:** If build times become excessive, you can remove the `--clean` flag from your deployment workflow to skip this step and retain previously generated images. This may speed up builds, especially for large sites.

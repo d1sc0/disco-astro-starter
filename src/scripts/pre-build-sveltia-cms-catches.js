@@ -78,4 +78,28 @@ function walkDir(dir) {
   });
 }
 
+// Optionally clean generated image folders if --clean flag is present
+if (process.argv.includes('--clean')) {
+  const previewDir = path.join(
+    __dirname,
+    '../../public/generated_preview_images',
+  );
+  const socialDir = path.join(
+    __dirname,
+    '../../public/generated_social_images',
+  );
+  function cleanDir(dir) {
+    if (fs.existsSync(dir)) {
+      fs.readdirSync(dir).forEach(file => {
+        const filePath = path.join(dir, file);
+        if (fs.lstatSync(filePath).isFile()) {
+          fs.unlinkSync(filePath);
+        }
+      });
+      console.log(`Cleaned: ${dir}`);
+    }
+  }
+  cleanDir(previewDir);
+  cleanDir(socialDir);
+}
 walkDir(POSTS_DIR);
