@@ -10,4 +10,4 @@ tags:
 
 Ham hock brisket, pork belly frankfurter bresaola. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami.
 
-![](/src/assets/uploaded_images/sunset-FULL.jpg)
+![](../../assets/uploaded_images/sunset-FULL.jpg)

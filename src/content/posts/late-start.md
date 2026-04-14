@@ -10,6 +10,6 @@ tags:
   - routine
 ---
 
-![](/src/assets/uploaded_images/baby-FULL.jpg)
+![](../../assets/uploaded_images/baby-FULL.jpg)
 
 Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami.
