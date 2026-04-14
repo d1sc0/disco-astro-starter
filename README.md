@@ -52,10 +52,10 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 ## Automation & Workflow
 
 - **Prebuild script** (`npm run prebuild`) runs before dev/build:
-   - Fixes image paths in Markdown files (uploaded via Sveltia CMS)
-   - Ensures image filenames in Markdown end with _RIGHT, _LEFT, or _FULL (adds _FULL if missing)
-   - Renames Markdown files to match their `slug` frontmatter (if present)
-   - Generates OG and preview images for all posts (Puppeteer)
+  - Fixes image paths in Markdown files (uploaded via Sveltia CMS)
+  - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing)
+  - Renames Markdown files to match their `slug` frontmatter (if present)
+  - Generates OG and preview images for all posts (Puppeteer)
 - **No manual Markdown or asset path edits needed after CMS use**
 - **Image templates** use the Inter font (Google Fonts) for consistent, modern rendering
 - **Astro build** copies all public/ assets to dist/ for deployment
@@ -85,7 +85,7 @@ See [docs/styling-naming-conventions.md](docs/styling-naming-conventions.md) for
 
 All OG and preview image generation settings (template path, fallback background, output directory, site title, style, and site URL) are managed in:
 
-   src/scripts/image-generation/image-config.json
+src/scripts/image-generation/image-config.json
 
 This makes it easy to update image generation parameters in one place for both scripts.
 
