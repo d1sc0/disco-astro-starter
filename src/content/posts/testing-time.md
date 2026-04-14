@@ -1,5 +1,6 @@
 ---
 title: Testing Time
+slug: testing-time
 draft: false
 pubDate: 2026-04-14T19:49:00
 description: This is a test to see if I've got my deploy scripts tight enough to post using the CMS and add images without buggering about in VScode
@@ -12,4 +13,4 @@ tags:
 
 This is a test of a new post and adding an image via Pexel to see if I can just save it and the deploy script will take care of the rest 🤞
 
-![](@/assets/uploaded_images/pexels-wal_-172619-36162880.jpg)
+![](../../assets/uploaded_images/pexels-wal_-172619-36162880_FULL.jpg)

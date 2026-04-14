@@ -13,7 +13,7 @@ function fixImagePathsInFile(filePath) {
   let changed = false;
   // Fix path and suffix, and rename image if needed
   content = content.replace(
-    /\]\(\/src\/assets\/uploaded_images\/([^\)]+)\)/g,
+    /\]\((?:\.\.\/\.\.\/assets\/uploaded_images|\/src\/assets\/uploaded_images)\/([^\)]+)\)/g,
     (match, p1) => {
       // p1 is the filename, e.g. foo.jpg
       const ext = path.extname(p1);
