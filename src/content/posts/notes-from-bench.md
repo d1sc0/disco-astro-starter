@@ -18,11 +18,3 @@ Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs,
 Bacon ipsum dolor amet brisket bresaola frankfurter, pork belly doner short ribs. Drumstick brisket boudin, shankle salami turducken. Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola.
 
 Pancetta brisket bresaola, frankfurter pork belly doner. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola.
-
-![](/src/assets/uploaded_images/sunset-FULL.jpg)
-
-![](/src/assets/uploaded_images/horse-RIGHT.jpg)
-
-![](/src/assets/uploaded_images/toys-FULL.jpg)
-
-![](/src/assets/uploaded_images/toys-FULL.jpg)

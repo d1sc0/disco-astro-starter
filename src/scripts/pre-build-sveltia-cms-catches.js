@@ -18,10 +18,12 @@ function fixImagePathsInFile(filePath) {
       // p1 is the filename, e.g. foo.jpg
       const ext = path.extname(p1);
       const base = p1.slice(0, -ext.length);
+      // Case-insensitive check for RIGHT, LEFT, FULL at end of base (no underscore)
+      const baseUpper = base.toUpperCase();
       if (
-        !base.endsWith('_RIGHT') &&
-        !base.endsWith('_LEFT') &&
-        !base.endsWith('_FULL')
+        !baseUpper.endsWith('RIGHT') &&
+        !baseUpper.endsWith('LEFT') &&
+        !baseUpper.endsWith('FULL')
       ) {
         changed = true;
         const newName = `${base}_FULL${ext}`;
