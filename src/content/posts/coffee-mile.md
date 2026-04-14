@@ -11,6 +11,6 @@ tags:
   - energy
 ---
 
-![](/src/assets/uploaded_images/pexels-vincent-tan-33488565.jpg)
+![](/src/assets/uploaded_images/building-RIGHT.jpg)
 
 Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami.
