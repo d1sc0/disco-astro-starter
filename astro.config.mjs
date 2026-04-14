@@ -7,7 +7,7 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://yourdomain.com',
+  site: 'https://astro-starter-97b06.web.app/',
   integrations: [
     mdx(),
     astroImageTools,
