@@ -19,7 +19,7 @@ Bacon ipsum dolor amet brisket bresaola frankfurter, pork belly doner short ribs
 
 Pancetta brisket bresaola, frankfurter pork belly doner. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola.
 
-![](/src/assets/uploaded_images/pexels-ewngnl-29379144.jpg)
+![](/src/assets/uploaded_images/sunset-FULL.jpg)
 
 ![](/src/assets/uploaded_images/pexels-taken-by-great-26712207.jpg)
 
