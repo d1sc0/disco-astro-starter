@@ -2,7 +2,7 @@
 title: Calm Chaos
 draft: false
 pubDate: 2025-08-08
-description: Drumstick brisket doner, pork belly boudin salami.
+description: Calm Chaos explores the balance between order and unpredictability, reflecting on how moments of serenity and disruption shape our daily experiences and personal growth.
 tags:
   - calm
   - chaos

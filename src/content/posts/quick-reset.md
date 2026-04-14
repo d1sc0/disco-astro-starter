@@ -3,7 +3,7 @@ title: Quick Reset
 slug: quick-reset
 draft: false
 pubDate: 2025-08-04
-description: Pancetta bacon ipsum dolor amet, brisket bresaola frankfurter rump short ribs strip steak.
+description: Quick Reset discusses the importance of taking breaks and resetting your mindset, sharing strategies for regaining focus, boosting productivity, and maintaining a healthy work-life balance.
 tags:
   - reset
   - productivity

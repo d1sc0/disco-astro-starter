@@ -3,7 +3,7 @@ title: Testing Time
 slug: testing-time
 draft: false
 pubDate: 2026-04-14T19:49:00
-description: This is a test to see if I've got my deploy scripts tight enough to post using the CMS and add images without buggering about in VScode
+description: A hands-on test of new CMS deployment scripts, ensuring images and posts are published smoothly without manual intervention in the development process.
 tags:
   - hope
   - development

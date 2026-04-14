@@ -45,3 +45,10 @@
 - If images are missing in generated images, check template and script logic
 - If Markdown files are not renamed, check slug frontmatter and prebuild script
 - If images are missing on deployed site, ensure they exist in public/ before build
+
+## User CSS/Media Query Preferences
+
+- All CSS must be mobile-first (default styles for mobile).
+- Only use @media (min-width: 768px) and (orientation: landscape) for desktop/landscape overrides.
+- Place all media queries at the end of the CSS file.
+- Do not use other media queries.

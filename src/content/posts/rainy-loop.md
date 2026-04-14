@@ -3,7 +3,7 @@ title: Rainy Loop
 slug: rainy-loop
 draft: false
 pubDate: 2025-08-06
-description: Ham hock brisket, pork belly frankfurter bresaola.
+description: Rainy Loop delves into the rhythms of rainy days, capturing the mood and reflections that come with overcast skies, comforting routines, and the beauty of quiet persistence.
 tags:
   - weather
 ---

@@ -2,7 +2,7 @@
 title: Coffee Mile
 draft: false
 pubDate: 2025-08-09
-description: Ribeye brisket short ribs, boudin doner salami.
+description: Coffee Mile celebrates the rituals of morning routines, exploring how a simple cup of coffee can energize the day, spark creativity, and set the tone for productivity and focus.
 tags:
   - coffee
   - routine

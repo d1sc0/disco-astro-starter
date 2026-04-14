@@ -3,7 +3,7 @@ title: Small Wins
 slug: small-wins
 draft: false
 pubDate: 2025-08-05
-description: Salami brisket turducken, pork loin bresaola t-bone.
+description: Small Wins highlights the significance of celebrating minor achievements, showing how recognizing progress, no matter how small, can build momentum and foster a positive mindset.
 tags:
   - motivation
   - small-wins

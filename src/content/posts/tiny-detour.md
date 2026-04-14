@@ -3,7 +3,7 @@ title: 'Tiny Detour'
 draft: false
 slug: tiny-detour
 pubDate: 2025-08-10
-description: 'Ham hock brisket, pork belly frankfurter bresaola.'
+description: Tiny Detour recounts an unexpected journey, highlighting how small changes in direction can lead to new discoveries, fresh perspectives, and memorable experiences along the way.
 tags: ['detour', 'unexpected', 'journey']
 ---
 

@@ -40,6 +40,17 @@ This project uses a modern, modular approach to CSS and component naming to ensu
 - **Keep selectors flat** (avoid deep nesting).
 - **Prefer utility classes** for spacing/margin when possible.
 
+## Media Query & Responsive CSS Guidelines
+
+- All CSS should be mobile-first: default styles are for mobile.
+- For desktop and landscape layouts, always use:
+  ```css
+  @media (min-width: 768px) and (orientation: landscape) { ... }
+  ```
+- Place all media queries at the end of the CSS file.
+- Do not use other media queries (e.g., max-width, portrait-only, or scattered queries).
+- This ensures consistency and makes responsive overrides easy to find and maintain.
+
 ---
 
 For more details, see the individual CSS files in `src/styles/` and component usage in `src/components/`.

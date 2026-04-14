@@ -3,7 +3,7 @@ title: A New Start
 slug: a-new-start
 draft: false
 pubDate: 2026-04-14T20:09:00
-description: this is a quick test post to see what it going on
+description: Exploring a fresh start with CMS integration, this post shares insights on testing new workflows and deploying images efficiently for content management.
 tags:
   - test
   - development

@@ -3,7 +3,7 @@ title: Changing Plans
 slug: changing-plans
 draft: false
 pubDate: 2025-08-03
-description: Bacon ipsum dolor amet brisket bresaola frankfurter, rump short ribs strip steak.
+description: Changing Plans reflects on adapting to new circumstances, embracing flexibility, and finding motivation when life’s original path shifts, offering insights on personal growth and resilience.
 tags:
   - motivation
   - planning
