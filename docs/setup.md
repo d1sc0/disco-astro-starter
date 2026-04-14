@@ -38,12 +38,21 @@ npm run build
 npx ts-node src/scripts/image-generation/generate-og-images.ts
 npx ts-node src/scripts/image-generation/generate-preview-images.ts
 
-This will also generate Open Graph (OG) and preview images for all episodes using Puppeteer and your HTML templates. See:
+
+This will also generate Open Graph (OG) and preview images for all posts using Puppeteer and your HTML templates. See:
 
 - [OG image generation details](og-image-generation.md)
 - [Preview image generation details](preview-image-generation.md)
 
 You can also run these scripts manually; see the respective docs for instructions.
+
+### Image Generation Configuration
+
+All OG and preview image generation settings (template path, fallback background, output directory, site title, style, and site URL) are managed in:
+
+    src/scripts/image-generation/image-config.json
+
+This makes it easy to update image generation parameters in one place for both scripts.
 
 ### Image Template Previews
 
@@ -62,6 +71,7 @@ Image path corrections and Markdown file renaming are now handled automatically 
 This script:
 
 - Fixes image paths in Markdown files (uploaded via Sveltia CMS) to ensure static build compatibility
+- Ensures image filenames in Markdown end with _RIGHT, _LEFT, or _FULL (adds _FULL if missing)
 - Renames Markdown files to match their `slug` frontmatter (if present)
 
 No manual changes are needed after uploading images or creating new posts in the CMS.

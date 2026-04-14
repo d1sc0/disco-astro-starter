@@ -17,6 +17,7 @@ This project uses Sveltia CMS (Netlify CMS compatible) for editing podcast episo
 
 To access the CMS, open `/admin/` in your deployed site.
 
+
 ## Prebuild Automation for Sveltia CMS
 
 Image path corrections and Markdown file renaming are now handled automatically by the prebuild script:
@@ -26,9 +27,20 @@ Image path corrections and Markdown file renaming are now handled automatically 
 This script:
 
 - Fixes image paths in Markdown files (uploaded via Sveltia CMS) to ensure static build compatibility
+- Ensures image filenames in Markdown end with _RIGHT, _LEFT, or _FULL (adds _FULL if missing)
 - Renames Markdown files to match their `slug` frontmatter (if present)
 
 No manual changes are needed after uploading images or creating new posts in the CMS.
+
+---
+
+## Image Generation Configuration
+
+All OG and preview image generation settings (template path, fallback background, output directory, site title, style, and site URL) are managed in:
+
+    src/scripts/image-generation/image-config.json
+
+This makes it easy to update image generation parameters in one place for both scripts.
 
 ## CSS Processing
 
