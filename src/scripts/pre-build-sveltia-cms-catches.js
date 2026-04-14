@@ -11,12 +11,11 @@ const POSTS_DIR = path.join(__dirname, '../content/posts');
 function fixImagePathsInFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let changed = false;
-  // Fix path and suffix
+  // Fix path and suffix, and rename image if needed
   content = content.replace(
     /\]\(\/src\/assets\/uploaded_images\/([^\)]+)\)/g,
     (match, p1) => {
       // p1 is the filename, e.g. foo.jpg
-      // Check for _RIGHT, _LEFT, _FULL before extension
       const ext = path.extname(p1);
       const base = p1.slice(0, -ext.length);
       if (
@@ -25,7 +24,16 @@ function fixImagePathsInFile(filePath) {
         !base.endsWith('_FULL')
       ) {
         changed = true;
-        return `](../../assets/uploaded_images/${base}_FULL${ext})`;
+        const newName = `${base}_FULL${ext}`;
+        // Try to rename the image file if it exists
+        const imgDir = path.join(__dirname, '../assets/uploaded_images');
+        const oldPath = path.join(imgDir, p1);
+        const newPath = path.join(imgDir, newName);
+        if (fs.existsSync(oldPath) && !fs.existsSync(newPath)) {
+          fs.renameSync(oldPath, newPath);
+          console.log(`Renamed image: ${oldPath} -> ${newPath}`);
+        }
+        return `](../../assets/uploaded_images/${newName})`;
       } else {
         changed = true;
         return `](../../assets/uploaded_images/${p1})`;

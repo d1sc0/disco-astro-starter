@@ -51,9 +51,9 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 
 ## Automation & Workflow
 
-- **Prebuild script** (`npm run prebuild`) runs before dev/build:
+- **Prebuild script** (`npm run prebuild`) runs before dev/build and automates all content and image normalization:
   - Fixes image paths in Markdown files (uploaded via Sveltia CMS)
-  - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing)
+  - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing) and renames the actual image file to match
   - Renames Markdown files to match their `slug` frontmatter (if present)
   - Generates OG and preview images for all posts (Puppeteer)
 - **No manual Markdown or asset path edits needed after CMS use**

@@ -27,7 +27,7 @@ Image path corrections and Markdown file renaming are now handled automatically 
 This script:
 
 - Fixes image paths in Markdown files (uploaded via Sveltia CMS) to ensure static build compatibility
-- Ensures image filenames in Markdown end with _RIGHT, _LEFT, or _FULL (adds _FULL if missing)
+- Ensures image filenames in Markdown end with _RIGHT, _LEFT, or _FULL (adds _FULL if missing) and renames the image file to match
 - Renames Markdown files to match their `slug` frontmatter (if present)
 
 No manual changes are needed after uploading images or creating new posts in the CMS.

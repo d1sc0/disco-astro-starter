@@ -23,9 +23,10 @@ collections:
       - { label: 'slug', name: 'slug', widget: 'string' }
       - { label: 'Draft', name: 'draft', widget: 'boolean' }
       - { label: 'Date', name: 'pubDate', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Tags', name: 'tags', widget: 'list' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: 'Meta Preview', name: 'description', widget: 'text' }
+      - { label: 'Tags', name: 'tags', widget: 'list' }
+
   - name: 'pages'
     label: 'Pages'
     folder: 'src/content/pages'
