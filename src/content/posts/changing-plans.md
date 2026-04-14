@@ -1,7 +1,7 @@
 ---
 title: 'Changing Plans'
 draft: false
-slug: ep1-changing-plans
+slug: changing-plans
 pubDate: 2025-08-03
 description: 'Bacon ipsum dolor amet brisket bresaola frankfurter, rump short ribs strip steak.'
 tags: ['motivation', 'planning', 'change']

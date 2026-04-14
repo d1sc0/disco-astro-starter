@@ -1,7 +1,7 @@
 ---
 title: 'Calm Chaos'
 draft: false
-slug: ep6-calm-chaos
+slug: calm-chaos
 pubDate: 2025-08-08
 description: 'Drumstick brisket doner, pork belly boudin salami.'
 tags: ['calm', 'chaos']

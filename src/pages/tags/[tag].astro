@@ -40,7 +40,7 @@ export async function getStaticPaths() {
         <ul class="tagged-posts-list">
           {filteredPosts.map(post => (
             <li>
-              <a href={post.slug ? `/posts/${post.slug}/` : '#'}>
+              <a href={post.id ? `/posts/${post.id}/` : '#'}>
                 {post.data.title}
               </a>
               <span>

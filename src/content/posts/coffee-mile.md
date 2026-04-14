@@ -1,6 +1,6 @@
 ---
 title: Coffee Mile
-slug: ep7-coffee-mile
+slug: coffee-mile
 draft: false
 pubDate: 2025-08-09
 description: 'Ribeye brisket short ribs, boudin doner salami.'

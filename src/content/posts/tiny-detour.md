@@ -1,7 +1,7 @@
 ---
 title: 'Tiny Detour'
 draft: false
-slug: ep8-tiny-detour
+slug: tiny-detour
 pubDate: 2025-08-10
 description: 'Ham hock brisket, pork belly frankfurter bresaola.'
 tags: ['detour', 'unexpected', 'journey']

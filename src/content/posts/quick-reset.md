@@ -1,7 +1,7 @@
 ---
 title: 'Quick Reset'
 draft: false
-slug: ep2-quick-reset
+slug: quick-reset
 pubDate: 2025-08-04
 description: 'Pancetta bacon ipsum dolor amet, brisket bresaola frankfurter rump short ribs strip steak.'
 tags: ['reset', 'productivity']

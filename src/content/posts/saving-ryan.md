@@ -1,6 +1,6 @@
 ---
 title: Saving Ryan
-slug: ep10-saving-ryan
+slug: saving-ryan
 draft: false
 pubDate: 2026-04-12T02:31:00
 description: 'Boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola.'

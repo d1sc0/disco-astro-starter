@@ -34,13 +34,11 @@ function fillTemplate(
   template: string,
   {
     siteTitle,
-    episodeNumber,
     title,
     siteUrl,
     bgPath,
   }: {
     siteTitle: string;
-    episodeNumber: string;
     title: string;
     siteUrl: string;
     bgPath: string;
@@ -48,7 +46,6 @@ function fillTemplate(
 ) {
   return template
     .replaceAll('%%SITE_TITLE%%', siteTitle)
-    .replaceAll('%%EPISODE_NUMBER%%', episodeNumber)
     .replaceAll('%%TITLE%%', title)
     .replaceAll('%%SITE_URL%%', siteUrl)
     .replaceAll('%%OG_BG%%', bgPath);
@@ -71,11 +68,7 @@ async function generateOGImages() {
       console.log(`OG image for ${outFile} already exists, skipping.`);
       continue;
     }
-    let postNumber = '';
-    const match = post.id.match(/^ep(\d+)-/);
-    if (match) {
-      postNumber = `Post ${match[1]}`;
-    }
+    // No episode number logic
     let html = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
     // Read and encode background as base64
     const bgBuffer = fs.readFileSync(BG_PATH);
@@ -99,7 +92,6 @@ async function generateOGImages() {
     const siteUrl = siteUrlMatch ? siteUrlMatch[1] : '';
     html = fillTemplate(html, {
       siteTitle: 'BLOG POST',
-      episodeNumber: postNumber,
       title: post.title,
       siteUrl,
       bgPath: '', // Not used anymore

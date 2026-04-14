@@ -30,13 +30,9 @@ async function getPosts() {
   });
 }
 
-function fillTemplate(
-  template,
-  { siteTitle, episodeNumber, title, siteUrl, bgPath },
-) {
+function fillTemplate(template, { siteTitle, title, siteUrl, bgPath }) {
   return template
     .replaceAll('%%SITE_TITLE%%', siteTitle)
-    .replaceAll('%%EPISODE_NUMBER%%', episodeNumber)
     .replaceAll('%%TITLE%%', title)
     .replaceAll('%%SITE_URL%%', siteUrl)
     .replaceAll('%%PREVIEW_BG%%', bgPath);
@@ -59,11 +55,7 @@ async function generatePreviewImages() {
       console.log(`Preview image for ${outFile} already exists, skipping.`);
       continue;
     }
-    let postNumber = '';
-    const match = post.id.match(/^ep(\d+)-/);
-    if (match) {
-      postNumber = `Post ${match[1]}`;
-    }
+    // No episode number logic
     let html = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
     // Read and encode background as base64
     const bgBuffer = fs.readFileSync(BG_PATH);
@@ -87,7 +79,6 @@ async function generatePreviewImages() {
     const siteUrl = siteUrlMatch ? siteUrlMatch[1] : '';
     html = fillTemplate(html, {
       siteTitle: 'BLOG POST',
-      episodeNumber: postNumber,
       title: post.title,
       siteUrl,
       bgPath: '', // Not used anymore

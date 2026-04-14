@@ -1,7 +1,7 @@
 ---
 title: 'Rainy Loop'
 draft: false
-slug: ep4-rainy-loop
+slug: rainy-loop
 pubDate: 2025-08-06
 description: 'Ham hock brisket, pork belly frankfurter bresaola.'
 tags: ['weather']

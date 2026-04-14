@@ -1,6 +1,6 @@
 ---
 title: Bench Notes
-slug: ep9-notes-from-bench
+slug: notes-from-bench
 draft: false
 pubDate: 2025-08-11
 description: 'Shankle brisket turducken, pork loin bresaola t-bone.'
