@@ -20,7 +20,6 @@ collections:
       - { field: pubDate, direction: descending }
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'slug', name: 'slug', widget: 'string' }
       - { label: 'Draft', name: 'draft', widget: 'boolean' }
       - { label: 'Date', name: 'pubDate', widget: 'datetime' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
@@ -38,7 +37,6 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'text' }
-      - { label: 'Slug', name: 'slug', widget: 'string' }
       - { label: 'Body', name: 'body', widget: 'markdown' }
   - name: 'navigation'
     label: 'Main Site Menu'
@@ -68,3 +66,5 @@ collections:
               - { label: 'URL', name: 'url', widget: 'string' }
               - { label: 'Icon', name: 'icon', widget: 'string' }
               - { label: 'Aria Label', name: 'aria', widget: 'string' }
+
+summary: '{{title}} ({{date}})'
