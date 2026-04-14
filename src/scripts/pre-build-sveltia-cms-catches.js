@@ -11,11 +11,25 @@ const POSTS_DIR = path.join(__dirname, '../content/posts');
 function fixImagePathsInFile(filePath) {
   let content = fs.readFileSync(filePath, 'utf8');
   let changed = false;
+  // Fix path and suffix
   content = content.replace(
     /\]\(\/src\/assets\/uploaded_images\/([^\)]+)\)/g,
     (match, p1) => {
-      changed = true;
-      return `](../../assets/uploaded_images/${p1})`;
+      // p1 is the filename, e.g. foo.jpg
+      // Check for _RIGHT, _LEFT, _FULL before extension
+      const ext = path.extname(p1);
+      const base = p1.slice(0, -ext.length);
+      if (
+        !base.endsWith('_RIGHT') &&
+        !base.endsWith('_LEFT') &&
+        !base.endsWith('_FULL')
+      ) {
+        changed = true;
+        return `](../../assets/uploaded_images/${base}_FULL${ext})`;
+      } else {
+        changed = true;
+        return `](../../assets/uploaded_images/${p1})`;
+      }
     },
   );
   if (changed) {
