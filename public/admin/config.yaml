@@ -18,6 +18,7 @@ collections:
     sortable_fields: ['title', 'pubDate']
     default_sort:
       - { field: pubDate, direction: descending }
+    summary: '{{title}} ({{pubDate}})'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Draft', name: 'draft', widget: 'boolean' }
@@ -66,5 +67,3 @@ collections:
               - { label: 'URL', name: 'url', widget: 'string' }
               - { label: 'Icon', name: 'icon', widget: 'string' }
               - { label: 'Aria Label', name: 'aria', widget: 'string' }
-
-summary: '{{title}} ({{date}})'
