@@ -4,6 +4,7 @@ backend:
   repo: d1sc0/disco-astro-starter
 
 media_folder: 'src/assets/uploaded_images'
+public_folder: '@/assets/uploaded_images'
 publish_mode: editorial_workflow
 
 collections:
