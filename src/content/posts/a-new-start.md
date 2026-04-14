@@ -13,4 +13,4 @@ tags:
 
 So this is another test of cms integration
 
-![plane](/src/assets/uploaded_images/pexels-jaxon-matthew-willis-36569638.jpg)
+![plane](../../assets/uploaded_images/pexels-jaxon-matthew-willis-36569638_FULL.jpg)
