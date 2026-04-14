@@ -11,6 +11,6 @@ tags:
   - mindset
 ---
 
-![](/src/assets/uploaded_images/pexels-anatolii-hrytsenko-30919014.jpg)
+![](../../assets/uploaded_images/pexels-anatolii-hrytsenko-30919014.jpg)
 
 Salami brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami. Ham hock brisket, pork belly frankfurter bresaola. Shankle brisket turducken, pork loin bresaola t-bone. Ribeye brisket short ribs, boudin doner salami.
