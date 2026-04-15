@@ -1,16 +1,11 @@
 ---
-import { getCollection } from 'astro:content';
+import { type CollectionEntry, getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import '../../styles/tags.css';
+import '../../styles/tags-list.css';
 
-type Post = {
-  data: {
-    tags?: string[];
-  };
-};
 type TagCount = { tag: string; count: number };
 
-const posts = (await getCollection('posts')) as Post[];
+const posts = (await getCollection('posts')) as CollectionEntry<'posts'>[];
 // Sort posts by pubDate descending (most recent first)
 posts.sort((a, b) => {
   const dateA = new Date(a.data.pubDate).getTime();
@@ -18,7 +13,7 @@ posts.sort((a, b) => {
   return dateB - dateA;
 });
 const tagCounts: Record<string, TagCount & { latestDate: number }> = {};
-posts.forEach((post: Post) => {
+posts.forEach((post: CollectionEntry<'posts'>) => {
   if (Array.isArray(post.data.tags)) {
     post.data.tags.forEach((tag: string) => {
       const tagLower = tag.toLowerCase();
@@ -56,7 +51,9 @@ const allTags: TagCount[] = Object.values(tagCounts)
             const filterInput = document.getElementById('tag-filter');
             if (filterInput) {
               filterInput.addEventListener('input', function(e) {
-                const val = e.target.value.toLowerCase();
+                const target = e.target;
+                if (!(target instanceof HTMLInputElement)) return;
+                const val = target.value.toLowerCase();
                 document.querySelectorAll('.tagged-posts-list li').forEach(el => {
                   if (el.textContent.toLowerCase().includes(val)) {
                     el.style.display = '';

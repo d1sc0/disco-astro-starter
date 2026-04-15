@@ -1,22 +1,15 @@
-/* tags.css: styles for all tag-related pages and components */
-
 .tagged-posts-list {
   column-gap: 2em;
   margin: 1.5em 0 0 0;
   padding: 0;
   list-style: none;
 }
-.tagged-posts-list {
-  margin: 1.5em 0 0 0;
-  padding: 0;
-  list-style: none;
-}
 
-/* Tag chip style for all-tags and post pages */
 .all-tags-list {
   columns: 2;
   column-gap: 2em;
 }
+
 .post-layout__tag-chip {
   display: inline-block;
   background: #f0f0f0;
@@ -30,13 +23,14 @@
     background 0.2s,
     color 0.2s;
   margin: 0;
+  margin-bottom:0.5em;
 }
+
 .post-layout__tag-chip:hover {
   background: #e0e0e0;
   color: #000;
 }
 
-/* Responsive filter input for all-tags page */
 .tag-filter-input {
   display: block;
   width: 100%;
@@ -49,49 +43,16 @@
   box-sizing: border-box;
 }
 
-/* Tag cloud styles */
-.tag-cloud {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  text-align: center;
-}
-
 .tag-page {
   margin: 0 auto;
 }
 
-.tag-title {
-  color: #0077cc;
-  font-weight: 600;
-}
-
-.tagged-posts-list li {
-  margin-bottom: 1.1em;
-  font-size: 1.1em;
-}
-
-.tagged-posts-list a {
-  color: #222;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.tagged-posts-list a:hover {
-  color: #0077cc;
-}
-
-.tagged-posts-list span {
-  color: #888;
-  font-size: 0.95em;
-}
-
-/* Desktop styles: always at end of file */
 @media (min-width: 768px) and (orientation: landscape) {
   .tag-filter-input {
     width: 40%;
     display: block;
   }
+
   .all-tags-list {
     columns: 3;
   }
