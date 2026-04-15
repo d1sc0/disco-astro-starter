@@ -29,15 +29,24 @@ npm run dev
 npm run build
 ```
 
-npx ts-node src/scripts/image-generation/generate-og-images.ts
-npx ts-node src/scripts/image-generation/generate-preview-images.ts
+This runs the Astro production build.
 
-This will also generate Open Graph (OG) and preview images for all posts using Puppeteer and your HTML templates. See:
+To regenerate Open Graph (OG) and preview images before building, run:
+
+```
+npm run prebuild
+```
+
+For a clean regeneration that deletes existing generated images first, run:
+
+```
+npm run prebuild:clean
+```
+
+You can also run the image generators manually. See:
 
 - [OG image generation details](og-image-generation.md)
 - [Preview image generation details](preview-image-generation.md)
-
-You can also run these scripts manually; see the respective docs for instructions.
 
 ### Image Generation Configuration
 

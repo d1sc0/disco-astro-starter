@@ -18,8 +18,8 @@
 
 ## Key Automation/Workflow
 
-- `prebuild` script runs before dev/build: fixes image paths, renames Markdown files to match slug, generates OG/preview images
-- Astro build copies all public/ assets to dist/ for deployment
+- `prebuild` script runs before `npm run dev`: fixes image paths, renames Markdown files to match slug, generates OG/preview images
+- `npm run build` runs Astro build only and copies all public/ assets to `dist/` for deployment
 
 ## Best Practices
 
@@ -29,15 +29,16 @@
 
 ## Deployment
 
-- GitHub Actions workflow runs `npm run build` (which triggers prebuild)
-- Only files in dist/ are deployed to Firebase
+- GitHub Actions workflow runs `npm run prebuild:clean`, then `npm run build`
+- Only files in `dist/` are deployed to Firebase
 - Any file renames or fixes during CI are NOT committed back to the repo (run prebuild locally and commit for repo sync)
 
 ## Useful Scripts
 
 - `npm run dev` — runs prebuild, then Astro dev server
-- `npm run build` — runs prebuild, then Astro build
+- `npm run build` — runs Astro build only
 - `npm run prebuild` — run all pre-deployment/preview automation
+- `npm run prebuild:clean` — clear generated image directories, then run prebuild automation
 - `npm run generate:og` / `npm run generate:preview` — manual image generation
 
 ## Troubleshooting

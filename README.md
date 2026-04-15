@@ -1,5 +1,3 @@
-src/scripts/pre-build-sveltia-cms-catches.js
-
 # Upstairs Downstairs Podcast
 
 A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular styles and a neutral, customizable palette.
@@ -31,7 +29,7 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
    - This runs all prebuild automation, then starts Astro.
 
 3. **Edit content:**
-   - Use `/admin/` (Sveltia CMS) to add/edit episodes and upload images.
+   - Use `/admin/` (Sveltia CMS) to add/edit posts, pages, navigation, and footer links.
    - All Markdown and image path corrections are automated (see below).
 4. **Build for production:**
 
@@ -39,7 +37,8 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
    npm run build
    ```
 
-   - Runs prebuild, generates OG/preview images, then builds Astro site.
+   - Runs Astro production build.
+   - If you want to regenerate OG/preview images first, run `npm run prebuild` (or `npm run prebuild:clean`) before `npm run build`.
 
 ---
 
@@ -51,32 +50,27 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 
 ## Automation & Workflow
 
-- **Prebuild script** (`npm run prebuild`) runs before dev/build and automates all content and image normalization:
+- **Prebuild script** (`npm run prebuild`) runs before `npm run dev` and automates all content and image normalization:
   - Fixes image paths in Markdown files (uploaded via Sveltia CMS)
   - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing) and renames the actual image file to match. These are used for CSS stlying of images in markdown.
   - Renames Markdown files to match their `slug` frontmatter (if present)
   - Generates OG and preview images for all posts (Puppeteer)
 - **No manual Markdown or asset path edits needed after CMS use**
 - **Image templates** use the Inter font (Google Fonts) for consistent, modern rendering
-- **Astro build** copies all public/ assets to dist/ for deployment
+- **Astro build** (`npm run build`) copies all public assets to dist/ for deployment
 
-#
-
-# Styling & Naming Conventions
-
-#
+## Styling & Naming Conventions
 
 See [docs/styling-naming-conventions.md](docs/styling-naming-conventions.md) for a detailed explanation of the project's CSS methodology, BEM naming, and design choices.
-
----
 
 ---
 
 ## Useful Scripts
 
 - `npm run dev` — runs prebuild, then Astro dev server
-- `npm run build` — runs prebuild, then Astro build
+- `npm run build` — runs Astro build only
 - `npm run prebuild` — run all pre-deployment/preview automation
+- `npm run prebuild:clean` — clear generated image directories, then run prebuild automation
 - `npm run generate:og` / `npm run generate:preview` — manual image generation
 
 ---
@@ -140,7 +134,7 @@ See [agent.md](agent.md) for co-pilot/agent onboarding, automation gotchas, and 
 - **Image preview and Open Graph generation** for social sharing
 - **Admin UI** for content management (Sveltia CMS)
 - **Automatic image and Markdown path correction**
-- **Pagination** for posts and episode lists
+- **Pagination** for post lists and tag pages
 - **Customizable site title and palette**
 
 ---

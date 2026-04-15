@@ -6,12 +6,16 @@ For details on how styles and class names are structured in this project, see [s
 
 # CMS & Content Editing
 
-This project uses Sveltia CMS (Netlify CMS compatible) for editing podcast episodes.
+This project uses Sveltia CMS (Netlify CMS compatible) for content editing.
 
 - CMS config: `public/admin/config.yaml`
-- Media folder: `src/assets/episode_images`
-- Content folder: `src/content/episodes`
-- Editable fields: title, draft, pubDate, description, mp3, mp3title, socialImage, body
+- Media folder: `src/assets/uploaded_images`
+- Main content folder: `src/content/posts`
+- Additional editable content:
+    - `src/content/pages`
+    - `src/content/navigation.json`
+    - `src/content/footer-links.json`
+- Post fields: title, slug, draft, pubDate, body, description, tags
 - Sortable by: title, pubDate
 - Default sort: pubDate descending
 
@@ -41,4 +45,3 @@ All OG and preview image generation settings (template path, fallback background
     src/scripts/image-generation/image-config.json
 
 This makes it easy to update image generation parameters in one place for both scripts.
-

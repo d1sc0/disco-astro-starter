@@ -28,15 +28,19 @@ This script generates Open Graph (OG) images for all posts using Puppeteer and a
 
 ## Usage
 
-Run automatically with the build:
+Run as part of prebuild automation:
 
 ```
-npm run build
+npm run prebuild
+```
+
+Or run clean prebuild (removes existing generated images first):
+
+```
+npm run prebuild:clean
 ```
 
 Or manually:
-
-npx ts-node src/scripts/generate-og-images.ts
 
 ```
 npx ts-node src/scripts/image-generation/generate-og-images.ts
