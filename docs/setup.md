@@ -8,14 +8,8 @@ See [styling-naming-conventions.md](styling-naming-conventions.md) for details o
 
 ## Requirements
 
-- Node.js 22.12.0 or higher (see .nvmrc)
+- Node.js 24 (see .nvmrc)
 - npm
-
-## CSS Processing
-
-This project uses **PostCSS** with `postcss-preset-env` and **autoprefixer** for modern CSS features and cross-browser compatibility. The configuration is in `postcss.config.cjs` and is automatically picked up by Astro.
-
-**Reminder:** If you do not need modern CSS features or autoprefixer, you can remove `postcss.config.cjs` and the related devDependencies from `package.json`.
 
 ## Install dependencies
 

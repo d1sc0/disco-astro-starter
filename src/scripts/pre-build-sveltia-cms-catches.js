@@ -25,26 +25,32 @@ function fixImagePathsInFile(filePath) {
         !baseUpper.endsWith('LEFT') &&
         !baseUpper.endsWith('FULL')
       ) {
-        changed = true;
         const newName = `${base}_FULL${ext}`;
+        const replacement = `](../../assets/uploaded_images/${newName})`;
+        if (match !== replacement) {
+          changed = true;
+        }
         // Try to rename the image file if it exists
         const imgDir = path.join(__dirname, '../assets/uploaded_images');
         const oldPath = path.join(imgDir, p1);
         const newPath = path.join(imgDir, newName);
         if (fs.existsSync(oldPath) && !fs.existsSync(newPath)) {
           fs.renameSync(oldPath, newPath);
-          console.log(`Renamed image: ${oldPath} -> ${newPath}`);
+          console.log(`path-fixes: ${newName} - updated`);
         }
-        return `](../../assets/uploaded_images/${newName})`;
+        return replacement;
       } else {
-        changed = true;
-        return `](../../assets/uploaded_images/${p1})`;
+        const replacement = `](../../assets/uploaded_images/${p1})`;
+        if (match !== replacement) {
+          changed = true;
+        }
+        return replacement;
       }
     },
   );
   if (changed) {
     fs.writeFileSync(filePath, content, 'utf8');
-    console.log(`Fixed image paths in: ${filePath}`);
+    console.log(`path-fixes: ${path.basename(filePath)} - updated`);
   }
 }
 
@@ -58,7 +64,7 @@ function renameFileToSlug(filePath) {
     const newPath = path.join(dir, newName);
     if (path.basename(filePath) !== newName && !fs.existsSync(newPath)) {
       fs.renameSync(filePath, newPath);
-      console.log(`Renamed file: ${filePath} -> ${newPath}`);
+      console.log(`path-fixes: ${newName} - updated`);
       return newPath;
     }
   }
@@ -96,7 +102,6 @@ if (process.argv.includes('--clean')) {
           fs.unlinkSync(filePath);
         }
       });
-      console.log(`Cleaned: ${dir}`);
     }
   }
   cleanDir(previewDir);

@@ -6,7 +6,7 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 
 ## Features
 
-- Astro v6 with Content Layer API for episodes
+- Astro v6 with Content Layer API for posts and some pages
 - Sveltia CMS (Netlify CMS compatible) for easy editing
 - Automated Open Graph (OG) and preview image generation (Node + Puppeteer)
 - Modular CSS with PostCSS (postcss-preset-env, autoprefixer)
@@ -45,7 +45,7 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 
 ## Requirements
 
-- Node.js 22.12.0 or higher (see .nvmrc)
+- Node.js 24.x (see .nvmrc)
 
 ---
 
@@ -53,7 +53,7 @@ A modern, white-labeled Astro v6 site for blog posts or podcasts, with modular s
 
 - **Prebuild script** (`npm run prebuild`) runs before dev/build and automates all content and image normalization:
   - Fixes image paths in Markdown files (uploaded via Sveltia CMS)
-  - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing) and renames the actual image file to match
+  - Ensures image filenames in Markdown end with \_RIGHT, \_LEFT, or \_FULL (adds \_FULL if missing) and renames the actual image file to match. These are used for CSS stlying of images in markdown.
   - Renames Markdown files to match their `slug` frontmatter (if present)
   - Generates OG and preview images for all posts (Puppeteer)
 - **No manual Markdown or asset path edits needed after CMS use**
@@ -91,7 +91,7 @@ This makes it easy to update image generation parameters in one place for both s
 
 ### Image Background Logic
 
-- The scripts use the first image in the post body as the background (with opacity and grayscale applied). If no image is found, the fallback background is used.
+- The scripts use the first image in the post body as the background (with opacity applied). If no image is found, the fallback background is used.
 - Output directories are auto-created if missing.
 
 ---
@@ -120,14 +120,6 @@ This script:
 - Renames Markdown files to match their `slug` frontmatter (if present)
 
 No manual changes are needed after uploading images or creating new posts in the CMS.
-
----
-
-## CSS Processing
-
-This project uses **PostCSS** with `postcss-preset-env` and **autoprefixer** for modern CSS features and cross-browser compatibility. The configuration is in `postcss.config.cjs` and is automatically picked up by Astro.
-
-**Reminder:** If you do not need modern CSS features or autoprefixer, you can remove `postcss.config.cjs` and the related devDependencies from `package.json`.
 
 ---
 

@@ -2,6 +2,9 @@
   "name": "disco-astro-starter",
   "type": "module",
   "version": "1.0.2",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "npm run prebuild && astro dev",
     "start": "astro dev",
@@ -31,11 +34,11 @@
     "gray-matter": "^4.0.3",
     "puppeteer": "^24.40.0",
     "react": "19.2.5",
-    "react-dom": "19.2.5"
+    "react-dom": "19.2.5",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.27",
-    "postcss-preset-env": "^11.2.0",
     "ts-node": "^10.9.2"
   }
 }

@@ -42,6 +42,3 @@ All OG and preview image generation settings (template path, fallback background
 
 This makes it easy to update image generation parameters in one place for both scripts.
 
-## CSS Processing
-
-This project uses **PostCSS** with `postcss-preset-env` and **autoprefixer** for modern CSS features and cross-browser compatibility. The configuration is in `postcss.config.cjs` and is automatically picked up by Astro.

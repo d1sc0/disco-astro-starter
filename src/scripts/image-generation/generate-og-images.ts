@@ -70,7 +70,6 @@ async function generateOGImages() {
     const outFile = `${post.id}.png`;
     const outPath = path.join(OUTPUT_DIR, outFile);
     if (fs.existsSync(outPath)) {
-      console.log(`OG image for ${outFile} already exists, skipping.`);
       continue;
     }
     // No episode number logic
@@ -134,8 +133,6 @@ async function generateOGImages() {
       siteUrl,
       bgPath: '', // Not used anymore
     });
-    // Debug log
-    console.log(`Generating OG: ${outFile}`);
     const page = await browser.newPage();
     await page.setViewport({ width: 1200, height: 630 });
     await page.setContent(html, { waitUntil: 'networkidle2' });
@@ -153,11 +150,9 @@ async function generateOGImages() {
       clip: { x: 0, y: 0, width: 1200, height: 630 },
     });
     await page.close();
-    console.log(`${outFile}`);
+    console.log(`social-image: ${outFile} - created`);
   }
   await browser.close();
-  console.log('All OG images generated.');
 }
 
-generateOGImages();
 generateOGImages();

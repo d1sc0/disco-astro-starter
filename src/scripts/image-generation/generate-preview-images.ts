@@ -61,7 +61,6 @@ async function generatePreviewImages() {
     const outFile = `${post.id}.png`;
     const outPath = path.join(OUTPUT_DIR, outFile);
     if (fs.existsSync(outPath)) {
-      console.log(`Preview image for ${outFile} already exists, skipping.`);
       continue;
     }
     // No episode number logic
@@ -118,8 +117,6 @@ async function generatePreviewImages() {
       siteUrl,
       bgPath: '', // Not used anymore
     });
-    // Debug log
-    console.log(`Generating preview: ${outFile}`);
     const page = await browser.newPage();
     await page.setViewport({ width: 600, height: 600 });
     await page.setContent(html, { waitUntil: 'networkidle2' });
@@ -137,10 +134,9 @@ async function generatePreviewImages() {
       clip: { x: 0, y: 0, width: 600, height: 600 },
     });
     await page.close();
-    console.log(`${outFile}`);
+    console.log(`preview-images: ${outFile} - created`);
   }
   await browser.close();
-  console.log('All preview images generated.');
 }
 
 generatePreviewImages();
