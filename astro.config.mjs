@@ -8,6 +8,11 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://astro-starter-97b06.web.app/',
+  vite: {
+    css: {
+      devSourcemap: true,
+    },
+  },
   integrations: [
     mdx(),
     astroImageTools,
